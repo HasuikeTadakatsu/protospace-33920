@@ -18,8 +18,7 @@ class PrototypesController < ApplicationController
   end
 
   def show
-    @comment = Comment.new
-    @comments = @prototype.comments
+    @prototype = Prototype.find(params[:id])
   end
 
   private
